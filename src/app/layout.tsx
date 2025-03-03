@@ -1,14 +1,16 @@
+import StyledComponentsRegistry from '@/utils/StyledComponentsRegistry';
+
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="ko">
       <body style={{ margin: 0 }}>
-        {/* <StyledComponentsRegistry>{children}</StyledComponentsRegistry> */}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         {children}
       </body>
     </html>
-  )
+  );
 }
